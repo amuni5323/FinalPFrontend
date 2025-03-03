@@ -1,0 +1,990 @@
+/* Ensure body and html take full height and width */
+body {
+  background-image: url('/images/fish-water.jpeg'); /* Adjust the path if needed */
+  background-size: cover; /* Ensure the image covers the whole screen */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps it fixed while scrolling */
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+/* Make sure the layout takes the full viewport width */
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+/* Optional: Ensure no gaps or padding */
+body {
+  padding: 0;
+  margin: 0;
+  background: url('https://www.transparenttextures.com/patterns/brushed-alum.png'), linear-gradient(135deg, #C0C0C0, #8B4513, #6A0DAD);
+  background-size: cover; /* Ensure the image covers the whole screen */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps it fixed while scrolling */
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.min-vh-100 {
+  min-height: 100vh;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+/* Full-width container without margins/padding */
+.container-fluid {
+  width: 100%;
+
+
+  padding-left: 0;
+  padding-right: 0;
+}
+.container-fluid {
+  max-width: 100vw;  /* Prevents overflow */
+  overflow-x: hidden; 
+
+  /* Removes horizontal scrolling */
+}
+.container{
+  max-width: 100vw;  /* Prevents overflow */
+  overflow-x: hidden; /* Removes horizontal scrolling */
+}
+
+
+/* Basic Navbar Styling */
+/* .navbar {
+  background-color: #f8f9fa;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 10;
+} */
+
+/* .navbar-nav .nav-item {
+  margin-right: 20px;
+} */
+
+/* .navbar-nav .nav-link {
+  color: #007bff;
+  font-weight: 500;
+} */
+
+/* .navbar-nav .nav-link:hover {
+  color: #0056b3;
+} */
+
+/* .navbar .navbar-toggler {
+  border: none;
+  background-color: #007bff;
+} */
+
+/* .navbar .navbar-toggler-icon {
+  background-color: #fff;
+} */
+
+/* Search Button and Input */
+/* .search-container {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+
+} */
+
+.search-container.active {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 16px;
+  width: 200px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+/* Fullscreen List when Search is Active */
+.fullscreen-list {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+.fullscreen-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.fullscreen-list li {
+  margin: 15px 0;
+}
+
+.fullscreen-list li a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.fullscreen-list li a:hover {
+  color: #007bff;
+}
+/* In your index.css or App.css */
+.img-small {
+  width: 10px;  
+  height: 10px;  
+}
+.service-card {
+  opacity: 0;
+  transform: rotateY(90deg);
+  animation: rotateAppear 6s infinite;
+}
+
+.service-card:nth-child(1) {
+  animation-delay: 0s;
+}
+.service-card:nth-child(2) {
+  animation-delay: 2s;
+}
+.service-card:nth-child(3) {
+  animation-delay: 4s;
+}
+
+@keyframes rotateAppear {
+  0% {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+  50% {
+    opacity: 1;
+    transform: rotateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: rotateY(-90deg);
+  }
+}
+
+/* Hide scrollbar arrows */
+.d-flex {
+  -ms-overflow-style: none;  /* Internet Explorer */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.d-flex::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+
+
+
+
+
+.feedback-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: white; /* Make feedback items stand out */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add some shadow for visual appeal */
+  margin-bottom: 20px;
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.feedback-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.feedback-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.default-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+  color: white;
+  font-size: 24px;
+}
+
+.feedback-comment {
+  font-style: italic;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.feedback-rate {
+  font-weight: bold;
+  color: hwb(211 51% 6%);
+  margin-bottom: 10px;
+}
+
+.feedback-name {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 20px; /* Added space for pagination */
+}
+
+.circle-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.circle-dot.active {
+  background-color: #0f161d; /* Active dot color */
+}
+
+.testimonials-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 250px; /* Set a minimum height */
+  display: flex;
+  justify-content: center;
+  
+}
+
+.testimonial {
+  margin-bottom: 20px; 
+  flex-direction: column;
+  min-height: 250px; /* Set a minimum height */
+  display: flex;
+  justify-content: center;
+  align-items: center;/* Space between feedback items */
+}
+.feedback-item {
+  max-width: 80%;
+  margin: auto;
+}
+
+#Contact {
+  background: #38a169; /* Green background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#Contact h5 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#Contact p {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+#Contact ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+}
+
+#Contact ul li {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+#Contact ul li svg {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.electric-link {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.electric-link:hover {
+  color: #d3d3d3;
+}
+
+
+
+
+/* Style for the button */
+/* .testimonials-btn {
+  background-color: #ffc107;
+  color: black;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+} */
+
+/* Initially hide testimonials */
+/* .testimonials-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  position: relative;
+} */
+
+/* Show testimonials when hovering */
+/* .show {
+  opacity: 1;
+  visibility: visible;
+} */
+
+/* Distribute testimonials on hover */
+/* .show .testimonial-1 {
+  transform: translateX(-80px); 
+} */
+
+/* .show .testimonial-2 {
+  transform: translateY(50px); 
+} */
+
+/* .show .testimonial-3 {
+  transform: translateX(80px); 
+} */
+/* Center align the section */
+.how-it-works {
+  text-align: center;
+}
+
+/* Step container styling */
+.step {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Rotation effect */
+.rotate-on-hover:hover {
+  transform: rotate(360deg);
+}
+/* Add spacing between elements */
+.newsletter h2, .newsletter p {
+  margin-bottom: 20px;
+}
+
+/* Rotate and scale animation for the form */
+@keyframes rotateAppearForm {
+  0% {
+    opacity: 0;
+    transform: rotateY(90deg) scale(0.36);
+  }
+  50% {
+    opacity: 1;
+    transform: rotateY(0) scale(0.36);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0) scale(1);
+  }
+}
+
+
+/* Global Styles - styles.css */
+
+/* Small screens (phones) */
+@media (max-width: 576px) {
+  body {
+      font-size: 14px;
+  }
+  .media {
+    margin-top: 250px !important; /* Smaller margin for very small screens */
+  }
+  /* .navbar {
+      flex-direction: column;
+  } */
+}
+.nav-container {
+  background: linear-gradient(to right, #111111, #17999c);
+  padding: 20px;
+}
+
+.electric-link {
+  
+  color: #6c757d; /* Default color */
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  transition: color 0.2s ease-in-out;
+}
+
+.electric-link:hover {
+  color: #00ffff; /* Neon blue */
+  animation: electric-glow 0.2s infinite alternate ease-in-out;
+}
+
+/* Electricity movement effect */
+@keyframes electric-glow {
+  0% { text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff; transform: translateX(0); }
+  25% { text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff; transform: translateX(-2px); }
+  50% { text-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff; transform: translateX(2px); }
+  75% { text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff; transform: translateX(-1px); }
+  100% { text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff; transform: translateX(1px); }
+}
+
+
+@keyframes linkMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(4px, 3px); } /* Moves slightly down & right */
+}
+
+/* Default Styles */
+@keyframes linkMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(4px, 3px); } /* Moves slightly down & right */
+}
+
+@keyframes divMove {
+  0% { transform: translate(0, 0); box-shadow: none; }
+  100% { transform: translate(2px, 2px); box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); }
+}
+
+/* Default Link Styles */
+.nav-link {
+  display: flex;
+  align-items: center;
+  color: #0c0c0c !important; /* Light Steel Blue */
+  font-size: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Default Icon Style */
+.nav-link svg {
+  margin-right: 5px;
+  font-size: 18px;
+  color: #161401; /* Gold */
+  transition: color 0.1s ease-in-out;
+}
+
+/* Default Div Styling */
+.nav-item {
+  background: whitesmoke;
+  transition: all 0.3s ease-in-out;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+/* Hover Effects */
+.nav-item:hover {
+  animation: divMove 0.2s forwards;
+}
+
+.nav-item:hover .nav-link {
+  color: #e009f4 !important; /* Bright Orange */
+  animation: linkMove 0.1s forwards;
+}
+
+.nav-item:hover .nav-link svg {
+  color: #17999c; /* Bright Teal */
+}
+
+
+
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .card {
+      width: 100%;
+  }
+ 
+
+  /* .sidebar {
+      display: none;
+  } */
+}
+
+/* Large screens (desktops) */
+@media (max-width: 992px) {
+  .hero-text {
+      font-size: 20px;
+  }
+ 
+}
+
+/* Extra large screens (large desktops) */
+@media (max-width: 1200px) {
+  .content {
+      max-width: 80%;
+  }
+
+}
+@media (max-width: 480px) { 
+  .media {
+    margin-top: 10px !important;  
+  }
+}
+
+/* For very small mobile screens (up to 320px) */
+@media (max-width: 320px) { 
+  .media {
+    margin-top: 100px !important; 
+  }
+}
+
+/* @media (max-width: 576px) {
+  .testimonials {
+    margin-left: 50px !important; 
+    margin-right: 50px !important;
+    padding: 5px !important; 
+  }
+
+  .testimonial-1 {
+margin-top: 20px !important;
+  }
+  .testimonial-2{
+    padding: 10px !important;
+  }
+
+  .testimonials-container {
+    flex-direction: column !important; 
+  }
+
+  .testimonial {
+    width: 100% !important; 
+    margin-bottom: 10px !important; 
+    margin-right: 0 !important;
+  }
+
+  .testimonials-btn {
+    font-size: 16px !important; 
+    padding: 10px 15px !important;
+  }
+
+  blockquote {
+    font-size: 14px !important; 
+  }
+} */
+
+
+
+/* Apply animation to the form when it appears */
+/* .animated-form {
+  animation: rotateAppear 1s ease-out forwards;
+} */
+
+/* Button with hover effect */
+/* .newsletters button {
+  transition: transform 0.3s ease;
+} */
+
+/* .newsletters button:hover {
+  transform: scale(1.05);
+} */
+/* src/styles/Logout.css */
+.logout-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.logout-container h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.logout-container p {
+  font-size: 1.2rem;
+  color: #888;
+}
+/* ✅ Navbar General Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 5%;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* ✅ Navbar Container */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* ✅ Navbar Brand (Logo) */
+.navbar-brand {
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+/* ✅ Navbar Links */
+.navbar-links {
+  display: flex;
+  gap: 25px;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.navbar-links a:hover {
+  color: #007bff;
+}
+
+/* ✅ Navigation Actions */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* ✅ Navigation Icons */
+.nav-icon {
+  font-size: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+/* ✅ User Dropdown */
+.user-dropdown {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+/* ✅ Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  display: none;
+  flex-direction: column;
+  width: 200px;
+  text-align: left;
+  z-index: 100;
+  padding: 10px;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+/* ✅ Show Dropdown on Hover */
+.user-dropdown:hover .dropdown-menu,
+.dropdown-menu.show {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ✅ Dropdown Menu Links */
+.dropdown-menu a,
+.dropdown-menu .btn-logout {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block;
+  transition: background 0.2s ease-in-out;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu .btn-logout:hover {
+  background: #007bff;
+  color: white;
+}
+
+/* ✅ Logout Button */
+.dropdown-menu .btn-logout {
+  background: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  padding: 10px;
+}
+
+/* ✅ Mobile Styles */
+.hamburger-menu {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+@media (max-width: 576px) {
+  .hero {
+    min-height: 80vh; /* Increase to give more height on smaller screens */
+    padding: 80px 20px; /* Adjust padding to fit the content properly */
+  }
+
+  .hero h1 {
+    font-size: 1.5rem; /* Optionally adjust font size for the header */
+  }
+
+  .hero .btn {
+    font-size: 1.2rem; /* Adjust font size for the button */
+    padding: 12px 25px; /* Adjust padding for the button */
+    margin-top: 20px; /* Add margin to ensure space around the button */
+  }
+}
+
+
+
+.hero {
+  position: relative;
+  background: url('https://www.transparenttextures.com/patterns/brushed-alum.png'), linear-gradient(135deg, #C0C0C0, #8B4513, #bb77ec);
+  padding: 150px 20px; /* Increased padding to push content down */
+  min-height: 40vh; /* Ensures section takes full screen height */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color:dark;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%; /* Wider for better effect */
+  height: 100%; /* Increased height to avoid cutting */
+  
+}
+
+.hero h1, .hero p, .hero a {
+  position: relative;
+  z-index: 1; /* Ensures text is on top */
+}
+
+
+
+/* ✅ Convert Nav Links to Icons on Small Screens */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 3%;
+  }
+
+  /* ✅ Hide Text on Small Screens */
+  .nav-text {
+    display: none;
+  }
+
+  /* ✅ Adjust Navbar Links */
+  .navbar-links {
+    gap: 10px;
+  }
+
+  /* ✅ Hide Navbar Links on Mobile */
+  .navbar-links {
+    display: flex;
+  }
+
+  /* ✅ Show Hamburger Button */
+  .hamburger-menu {
+    display: block;
+  }
+}
+
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px; /* Space between links and the bottom of the footer */
+  margin-left: 10%; /* Adjust this value for left margin */
+  width: 80%; /* Adjust width as needed */
+}
+
+.footer-links .col-md-4 {
+  text-align: center;
+}
+.container-login{
+  margin-top: auto;
+}
+
+#Contact {
+  background: url('https://www.transparenttextures.com/patterns/brushed-alum.png'), linear-gradient(135deg, #C0C0C0, #8B4513, #6A0DAD);
+  color: #333;
+  padding: 30px;
+  
+  border-radius: 10px;
+  width: 100vw;
+  background-size: cover;
+  margin-bottom: 20px;
+  min-height: 80%;
+  
+  
+}
+
+
+#Contact h5 {
+  color: #6A0DAD;
+ /* Deep purple for a bold, elegant touch */
+}
+
+#Contact p {
+  color: #444; /* Slightly darker gray for better contrast */
+}
+
+#Contact .form-control {
+  background-color: white;
+  border: 1px solid #8B4513; /* Brown border for a warm touch */
+  color: #333;
+}
+
+#Contact .btn-primary {
+  background-color: #8B4513; /* Warm brown button */
+  border-color: #8B4513;
+  color: white;
+  margin-top: 10px;
+}
+
+#Contact .btn-primary:hover {
+  background-color: #5A2D0C; /* Darker brown on hover */
+}
+
+#Contact a {
+  color: #9370DB; /* Soft lavender for a modern, stylish look */
+}
+
+#Contact a:hover {
+  color: #6A0DAD; /* Deep purple hover effect */
+}
+
+
+@media (max-width: 992px) { /* Tablets and small desktops */
+  #Contact {
+    padding: 60px;
+    margin-left: 10px; 
+    /* Reduce padding */
+  }
+  .form-group{
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 768px) { /* Tablets & small screens */
+  #Contact {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px; /* Adjust padding */
+  }
+
+  #Contact .col-md-6 {
+    width: 100%; /* Stack elements */
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) { /* Mobile devices */
+  #Contact {
+    padding: 40px 20px; /* Reduce padding for smaller screens */
+    border-radius: 0; /* Remove border radius for full width */
+  }
+
+  #Contact h5 {
+    font-size: 20px; /* Adjust heading size */
+  }
+
+  #Contact p {
+    font-size: 14px; /* Reduce paragraph size */
+  }
+
+  #Contact .form-control {
+    font-size: 14px;
+    /* Adjust input field text size */
+  }
+
+  #Contact .btn-primary {
+    width: 100%; /* Full-width button */
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+footer{
+  background: linear-gradient(135deg, #C0C0C0, #8B4513, #6A0DAD);
+}
