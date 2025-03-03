@@ -34,7 +34,7 @@ const EventList = () => {
 
     try {
         // Step 1: Check if the email has already booked this event
-        const checkResponse = await axios.get('https://finalpbackend-2.onrender.com//api/booking/check', {
+        const checkResponse = await axios.get('https://finalpbackend-2.onrender.com/api/booking/check', {
             params: { eventId, email: bookingInfo.email }
         });
 
