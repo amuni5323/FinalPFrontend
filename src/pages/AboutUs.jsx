@@ -94,14 +94,14 @@ const AboutUs = () => {
          <h5>Voted #1 in 318 Categories</h5>
         </div>
       </div >  <div className="d-flex flex-row flex-nowrap justify-content-center align-items-center mt-5 w-75" style={{ gap: '20px', marginLeft: '10%', overflowX: 'auto', scrollbarWidth: 'none' }}>
-  <img src="/src/assets/shelterlogos.png" alt="Shelter Logo" className="img-fluid" style={{ maxHeight: '150px' }} />
-  <img src="/src/assets/blue-hospital.png" alt="Hospital Logo" className="img-fluid" style={{ maxHeight: '150px' }} />
-  <img src="/src/assets/headoffice.jpeg" alt="Hotel Logo" className="img-fluid" style={{ maxHeight: '150px' }} />
-  <img src="/src/assets/govermentoffice.jpeg" alt="Government Logo" className="img-fluid" style={{ maxHeight: '150px' }} />
-  <img src="/src/assets/policelogo.png" alt="Police Logo" className="img-fluid" style={{ maxHeight: '150px' }} />
-  <img src="/src/assets/eventlogo.png" alt="Customer Logo" className="img-fluid" style={{ maxHeight: '100px' }} />
-  <img src="/src/assets/joblog.jpeg" alt="Award Logo" className="img-fluid" style={{ maxHeight: '100px' }} />
-  <img src="/src/assets/booklog.jpeg" alt="Employee Logo" className="img-fluid" style={{ maxHeight: '100px' }} />
+  <img src="/images/shelterlogos.png" alt="Shelter Logo" className="img-fluid" style={{ maxHeight: '150px' }} />
+  <img src="/images/blue-hospital.png" alt="Hospital Logo" className="img-fluid" style={{ maxHeight: '150px' }} />
+  <img src="/images/headoffice.jpeg" alt="Hotel Logo" className="img-fluid" style={{ maxHeight: '150px' }} />
+  <img src="/images/govermentoffice.jpeg" alt="Government Logo" className="img-fluid" style={{ maxHeight: '150px' }} />
+  <img src="/images/policelogo.png" alt="Police Logo" className="img-fluid" style={{ maxHeight: '150px' }} />
+  <img src="/images/eventlogo.png" alt="Customer Logo" className="img-fluid" style={{ maxHeight: '100px' }} />
+  <img src="/images/joblog.jpeg" alt="Award Logo" className="img-fluid" style={{ maxHeight: '100px' }} />
+  <img src="/images/booklog.jpeg" alt="Employee Logo" className="img-fluid" style={{ maxHeight: '100px' }} />
 </div>
     
 

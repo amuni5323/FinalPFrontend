@@ -12,7 +12,7 @@ const EventList = () => {
   const [bookingInfo, setBookingInfo] = useState({ fullName: '', email: '', qrCodeImage: '' });
 
   useEffect(() => {
-    fetchApprovedEvents(); // ✅ Call the correct fetch function
+    fetchApprovedEvents(); 
   }, [fetchApprovedEvents]);
   useEffect(() => {
     if (searchQuery) {
