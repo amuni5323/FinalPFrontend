@@ -48,6 +48,46 @@ const Login = () => {
     }
   };
 
+  const handleRegister = async (e) => {
+        e.preventDefault();
+    
+        // Reset error and success messages
+        setErrorMessage('');
+        setSuccessMessage('');
+    
+        // Validate password length before sending request
+        if (password.length < 6) {
+          setErrorMessage('Password must be at least 6 characters long.');
+          return; // Stop the function if the password is too short
+        }
+    
+        try {
+          // Send registration request to the backend
+          const response = await fetch('https://finalpbackend-2.onrender.com/api/users/register', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, password, fullname }),
+          });
+    
+          console.log('Registration request sent');
+    
+          const data = await response.json();
+    
+          // If registration is successful
+          if (response.ok) {
+            setSuccessMessage(data.message);
+          } else {
+            setErrorMessage(data.message);
+          }
+        } catch (error) {
+          setErrorMessage('Network error, please try again later.');
+        }
+      };
+
+
+
   const toggleForm = () => {
     setIsSignIn(!isSignIn);
     setError(null);
@@ -172,7 +212,7 @@ const Login = () => {
               </button>
             </div>
             <div className="col-md-6 form-container">
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleRegister}>
                 <h3>Create Account</h3>
                 {error && <div className="alert alert-danger">{error}</div>}
                 {successMessage && <div className="alert alert-success">{successMessage}</div>}
