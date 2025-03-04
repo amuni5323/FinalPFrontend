@@ -1036,24 +1036,24 @@ footer{
 /* Default styling */
 .map-container {
   width: 100%;
-  height: 500px; /* Default height for larger screens */
+  height: 500px; 
 }
 
-/* Mobile screens (max-width: 768px) */
+
 @media (max-width: 768px) {
   .map-container {
-    height: 300px; /* Reduce height for better fit */
+    height: 300px; 
   }
 
   .leaflet-popup-content {
-    font-size: 14px; /* Smaller text for better readability */
+    font-size: 14px; 
   }
 }
 
-/* Very small screens (max-width: 480px) */
+
 @media (max-width: 480px) {
   .map-container {
-    height: 250px; /* Further reduce height */
+    height: 250px; 
   }
 
   .leaflet-popup-content {
