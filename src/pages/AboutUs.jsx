@@ -44,7 +44,7 @@ const AboutUs = () => {
       {/* Another Image with Description Beside It */}
       <div className="row align-items-center mb-5" >
         <div className="col-md-4">
-          <img src="/src/assets/image4.jpeg" alt="Business Illustration" className="img-fluid mx-5 w-75" />
+          <img src="/images/image4.jpeg" alt="Business Illustration" className="img-fluid mx-5 w-75" />
         </div>
         <div className="col-md-8">
           <p>
@@ -81,16 +81,17 @@ const AboutUs = () => {
       <h3 className="text-center mt-5 " style={{marginBottom:'5%'}}>By the Numbers</h3>
       <div className="row text-center ">
         {/* HubSpot By the Numbers */}
-        <div className="col-md-3 text-secondary">
+        <div className="col-md-3" style={{ color: "gray" }}>
+ 
           <h5>12+ Global Offices</h5>
         </div>
-        <div className="col-md-3 text-secondary">
+        <div className="col-md-3 ">
           <h5>700+ Employees</h5>
         </div>
-        <div className="col-md-3 text-secondary">
+        <div className="col-md-3">
           <h5>205,000 Customers</h5>
         </div>
-        <div className="col-md-3 text-secondary">
+        <div className="col-md-3 ">
          <h5>Voted #1 in 318 Categories</h5>
         </div>
       </div >  <div className="d-flex flex-row flex-nowrap justify-content-center align-items-center mt-5 w-75" style={{ gap: '20px', marginLeft: '10%', overflowX: 'auto', scrollbarWidth: 'none' }}>
