@@ -5,7 +5,7 @@ import "../index.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
-  const [fullname, setFullname] = useState(""); // Fixed function name
+  const [name, setname] = useState(""); // Fixed function name
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
   const [successMessage, setSuccessMessage] = useState("");
@@ -53,6 +53,12 @@ const Login = () => {
     setErrorMessage('');
     setSuccessMessage('');
 
+    if (!email || !password || !fullname) {
+      setErrorMessage('All fields are required!');
+      return;
+    }
+
+
     if (password.length < 6) {
       setErrorMessage('Password must be at least 6 characters long.');
       return;
@@ -62,7 +68,7 @@ const Login = () => {
       const response = await fetch('https://finalpbackend-2.onrender.com/api/users/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password, fullname }),
+        body: JSON.stringify({ email, password, name }),
       });
 
       console.log('Registration request sent');
@@ -179,8 +185,8 @@ const Login = () => {
                   type="text"
                   className="form-control mb-2"
                   placeholder="Full Name"
-                  value={fullname}
-                  onChange={(e) => setFullname(e.target.value)}
+                  value={name}
+                  onChange={(e) => setname(e.target.value)}
                   required
                 />
                 <input
