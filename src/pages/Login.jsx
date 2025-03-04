@@ -5,10 +5,11 @@ import "../index.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
-  const [fullname, setFullame] = useState("");
+  const [fullname, setFullname] = useState(""); // Fixed function name
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
   const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState(""); // ✅ Added this missing state
   const [isSignIn, setIsSignIn] = useState(true);
   const navigate = useNavigate();
 
@@ -28,12 +29,11 @@ const Login = () => {
         { headers: { "Content-Type": "application/json" } }
       );
 
-      console.log("Login Response:", response.data); // Log response data
+      console.log("Login Response:", response.data);
 
       if (response.data.token) {
         localStorage.setItem("userToken", response.data.token);
 
-        // Check if user is an admin
         if (response.data.role === "admin" || response.data.isAdmin === true) {
           navigate("/admin/create");
         } else {
@@ -49,44 +49,35 @@ const Login = () => {
   };
 
   const handleRegister = async (e) => {
-        e.preventDefault();
-    
-        // Reset error and success messages
-        setErrorMessage('');
-        setSuccessMessage('');
-    
-        // Validate password length before sending request
-        if (password.length < 6) {
-          setErrorMessage('Password must be at least 6 characters long.');
-          return; // Stop the function if the password is too short
-        }
-    
-        try {
-          // Send registration request to the backend
-          const response = await fetch('https://finalpbackend-2.onrender.com/api/users/register', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ email, password, fullname }),
-          });
-    
-          console.log('Registration request sent');
-    
-          const data = await response.json();
-    
-          // If registration is successful
-          if (response.ok) {
-            setSuccessMessage(data.message);
-          } else {
-            setErrorMessage(data.message);
-          }
-        } catch (error) {
-          setErrorMessage('Network error, please try again later.');
-        }
-      };
+    e.preventDefault();
+    setErrorMessage('');
+    setSuccessMessage('');
 
+    if (password.length < 6) {
+      setErrorMessage('Password must be at least 6 characters long.');
+      return;
+    }
 
+    try {
+      const response = await fetch('https://finalpbackend-2.onrender.com/api/users/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password, fullname }),
+      });
+
+      console.log('Registration request sent');
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSuccessMessage(data.message);
+      } else {
+        setErrorMessage(data.message);
+      }
+    } catch (error) {
+      setErrorMessage('Network error, please try again later.');
+    }
+  };
 
   const toggleForm = () => {
     setIsSignIn(!isSignIn);
@@ -115,53 +106,21 @@ const Login = () => {
               align-items: center;
               padding: 20px;
             }
-
-            /* Mobile responsiveness */
             @media (max-width: 768px) {
-              .auth-container {
-                flex-direction: column;
-              }
-              .col-md-6 {
-                width: 100%;
-                padding: 15px;
-              }
-              .overlay h2 {
-                font-size: 1.5rem;
-              }
-              .overlay p {
-                font-size: 1rem;
-              }
-              .form-container form {
-                width: 100%;
-              }
-              .btn {
-                padding: 10px;
-                font-size: 1rem;
-              }
-              .form-control {
-                padding: 12px;
-                font-size: 1rem;
-              }
+              .auth-container { flex-direction: column; }
+              .col-md-6 { width: 100%; padding: 15px; }
+              .overlay h2 { font-size: 1.5rem; }
+              .overlay p { font-size: 1rem; }
+              .form-container form { width: 100%; }
+              .btn { padding: 10px; font-size: 1rem; }
+              .form-control { padding: 12px; font-size: 1rem; }
             }
-
             @media (max-width: 480px) {
-              .auth-container {
-                padding: 10px;
-              }
-              .overlay h2 {
-                font-size: 1.3rem;
-              }
-              .form-container h3 {
-                font-size: 1.2rem;
-              }
-              .btn {
-                font-size: 0.9rem;
-                padding: 8px;
-              }
-              .form-control {
-                padding: 10px;
-                font-size: 1rem;
-              }
+              .auth-container { padding: 10px; }
+              .overlay h2 { font-size: 1.3rem; }
+              .form-container h3 { font-size: 1.2rem; }
+              .btn { font-size: 0.9rem; padding: 8px; }
+              .form-control { padding: 10px; font-size: 1rem; }
             }
           `}
         </style>
@@ -214,14 +173,14 @@ const Login = () => {
             <div className="col-md-6 form-container">
               <form onSubmit={handleRegister}>
                 <h3>Create Account</h3>
-                {error && <div className="alert alert-danger">{error}</div>}
+                {errorMessage && <div className="alert alert-danger">{errorMessage}</div>}
                 {successMessage && <div className="alert alert-success">{successMessage}</div>}
                 <input
                   type="text"
                   className="form-control mb-2"
                   placeholder="Full Name"
-                  value={fullname}  // Fixed this field (previously incorrect)
-                  onChange={(e) => setFullame(e.target.value)}
+                  value={fullname}
+                  onChange={(e) => setFullname(e.target.value)}
                   required
                 />
                 <input
