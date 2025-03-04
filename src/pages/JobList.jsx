@@ -136,16 +136,19 @@ const JobList = () => {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               />
-              <MapMover center={mapCenter} />
-              {jobData && (
-                <Marker position={[jobData.latitude, jobData.longitude]}>
-                  <Popup>
-                    <strong>{jobData.title}</strong>
-                    <br />
-                    {jobData.location}
-                  </Popup>
-                </Marker>
-              )}
+           <div className="map-container">
+  <MapMover center={mapCenter} />
+  {jobData && (
+    <Marker position={[jobData.latitude, jobData.longitude]}>
+      <Popup>
+        <strong>{jobData.title}</strong>
+        <br />
+        {jobData.location}
+      </Popup>
+    </Marker>
+  )}
+</div>
+
             </MapContainer>
           </div>
 

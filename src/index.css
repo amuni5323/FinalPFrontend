@@ -988,3 +988,75 @@ margin-top: 20px !important;
 footer{
   background: linear-gradient(135deg, #C0C0C0, #8B4513, #6A0DAD);
 }
+@media (max-width: 767px) {
+  footer {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col-12, .col-md-4 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .position-absolute {
+    position: static !important;
+    margin-top: 20px;
+  }
+
+  .position-absolute a {
+    display: inline-block;
+    margin: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .feedback {
+    padding: 20px;
+  }
+
+  .card {
+    width: 100% !important;
+    padding: 20px;
+  }
+
+  .form-control {
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 18px;
+    padding: 10px;
+  }
+}
+/* Default styling */
+.map-container {
+  width: 100%;
+  height: 500px; /* Default height for larger screens */
+}
+
+/* Mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .map-container {
+    height: 300px; /* Reduce height for better fit */
+  }
+
+  .leaflet-popup-content {
+    font-size: 14px; /* Smaller text for better readability */
+  }
+}
+
+/* Very small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .map-container {
+    height: 250px; /* Further reduce height */
+  }
+
+  .leaflet-popup-content {
+    font-size: 12px; /* Even smaller text */
+  }
+}

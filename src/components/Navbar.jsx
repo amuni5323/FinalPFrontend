@@ -49,9 +49,10 @@ const Navbar = () => {
                 <FaUser className="me-2" /> <span className=''>Logout</span>
               </Nav.Link>
             ) : (
-              <Nav.Link as={Link} to="/login" onClick={handleLogin}   >
-                Login/Register
-              </Nav.Link>
+              <Nav.Link as={Link} to="/login" onClick={handleLogin} className="ms-5">
+  Login/Register
+</Nav.Link>
+
             )}
           </Nav>
         </BootstrapNavbar.Collapse>
