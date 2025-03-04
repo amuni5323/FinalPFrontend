@@ -1,5 +1,5 @@
-import React, { createContext, useState, useEffect } from "react";
 import axios from "axios";
+import React, { createContext, useEffect, useState } from "react";
 
 export const DataContext = createContext();
 
@@ -33,7 +33,7 @@ export const DataContextProvider = ({ children }) => {
   // Fetch approved events
   const fetchApprovedEvents = async () => {
     try {
-      const response = await axios.get("https://finalpbackend-2.onrender.com/api/events/approve");
+      const response = await axios.get("http://localhost:5000/api/events/approve");
       setData(response.data);
     } catch (error) {
       console.error("Error fetching approved events:", error);
