@@ -53,7 +53,7 @@ const Login = () => {
     setErrorMessage('');
     setSuccessMessage('');
 
-    if (!email || !password || !fullname) {
+    if (!email || !password || !name) {
       setErrorMessage('All fields are required!');
       return;
     }
