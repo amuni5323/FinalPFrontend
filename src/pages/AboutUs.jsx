@@ -8,7 +8,7 @@ const AboutUs = () => {
       {/* Description with Image beside it */}
       <div className="row align-items-center mb-5">
         <div className="col-md-4">
-          <img src="/src/assets/server-concept-illustration.avif" alt="Service Concept" className="img-fluid w-75 mx-5" />
+          <img src="/images/server-concept-illustration.avif" alt="Service Concept" className="img-fluid w-75 mx-5" />
         </div>
         <div className="col-md-8 ">
           <p>
@@ -28,7 +28,7 @@ const AboutUs = () => {
   </div>
 
   {/* We're Different Section */}
-  <div className="col-md-6 mb-4 mx-5" style={{ border: '2px solid white' }}>
+  <div className="col-md-6 mb-4 mx-3" style={{ border: '2px solid white' }}>
     <h4 className='m-3'>WE'RE DIFFERENT THAN THE REST</h4>
     <p>Unlike other platforms, we are deeply focused on improving user experience and access to services. We’ve combined cutting-edge technology with a user-first approach to ensure that our customers can easily find and access the services they need. Whether it’s healthcare, hospitality, or government services, we’ve tailored our platform to make life easier for individuals in Addis Ababa.</p>
     <p>Our journey began when we realized the challenges many faced in accessing essential services, so we created a solution that simplifies the process and ensures efficiency.</p>
