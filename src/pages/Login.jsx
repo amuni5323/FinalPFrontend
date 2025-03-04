@@ -5,6 +5,7 @@ import "../index.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
+  const [fullname, setFullame] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
   const [successMessage, setSuccessMessage] = useState("");
@@ -179,8 +180,8 @@ const Login = () => {
                   type="text"
                   className="form-control mb-2"
                   placeholder="Full Name"
-                  value={email}  // Fixed this field (previously incorrect)
-                  onChange={(e) => setEmail(e.target.value)}
+                  value={fullname}  // Fixed this field (previously incorrect)
+                  onChange={(e) => setFullame(e.target.value)}
                   required
                 />
                 <input
