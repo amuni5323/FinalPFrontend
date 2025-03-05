@@ -98,7 +98,7 @@ const AboutUs = () => {
   <img src="/images/shelterlogos.png" alt="Shelter Logo" className="img-fluid" style={{ maxHeight: '150px' }} />
   <img src="/images/blue-hospital.png" alt="Hospital Logo" className="img-fluid" style={{ maxHeight: '150px' }} />
   <img src="/images/headoffice.jpeg" alt="Hotel Logo" className="img-fluid" style={{ maxHeight: '150px' }} />
-  <img src="/images/govermentoffice.jpeg" alt="Government Logo" className="img-fluid" style={{ maxHeight: '150px' }} />
+  <img src="/images/Govermentoffice.jpeg" alt="Government Logo" className="img-fluid" style={{ maxHeight: '150px' }} />
   <img src="/images/policelogo.png" alt="Police Logo" className="img-fluid" style={{ maxHeight: '150px' }} />
   <img src="/images/eventlogo.png" alt="Customer Logo" className="img-fluid" style={{ maxHeight: '100px' }} />
   <img src="/images/joblog.jpeg" alt="Award Logo" className="img-fluid" style={{ maxHeight: '100px' }} />
