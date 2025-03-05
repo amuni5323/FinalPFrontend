@@ -86,6 +86,10 @@ const Home = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
       });
+      const data = await response.json(); // Read response body
+      console.log("Response Status:", response.status);
+      console.log("Response Data:", data);
+      
       setResponseMessage(response.ok ? 'Thank you for subscribing!' : 'Something went wrong.');
       setEmail(response.ok ? '' : email);
     } catch {minHeight: '100vh', 
