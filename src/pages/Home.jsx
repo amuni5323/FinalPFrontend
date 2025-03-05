@@ -81,7 +81,7 @@ const Home = () => {
       return;
     }
     try {
-      const response = await fetch('/api/subscribe', {
+      const response = await fetch('https://finalpbackend-2.onrender.com/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
