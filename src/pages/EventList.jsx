@@ -95,7 +95,7 @@ const EventList = () => {
                     <p><strong>Date:</strong> {new Date(event.date).toLocaleDateString()}</p>
                     <p><strong>Location:</strong> {event.location}</p>
                     <Dropdown>
-                      <Dropdown.Toggle variant="primary" id="dropdown-basic">
+                      <Dropdown.Toggle variant="secondary" id="dropdown-basic">
                         Book Now
                       </Dropdown.Toggle>
                       <Dropdown.Menu>
@@ -108,7 +108,7 @@ const EventList = () => {
                             <Form.Label>Email</Form.Label>
                             <Form.Control type="email" placeholder="Your Email" onChange={(e) => setBookingInfo({ ...bookingInfo, email: e.target.value })} />
                           </Form.Group>
-                          <Button className="mt-2 w-100" onClick={() => handleBooking(event._id)}>Confirm Booking</Button>
+                          <Button className="mt-2 w-100 bg-secondary" onClick={() => handleBooking(event._id)}>Confirm Booking</Button>
                         </Form>
                       </Dropdown.Menu>
                     </Dropdown>
