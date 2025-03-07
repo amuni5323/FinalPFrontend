@@ -73,42 +73,37 @@ const Home = () => {
     // }, 1000); // Duration of the animation (1 second)
   
 
-  const handleSubscribe = async (e) => {
-    e.preventDefault();
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      setResponseMessage('Please enter a valid email address.');
-      return;
-    }
-    try {
-      const response = await fetch('https://finalpbackend-2.onrender.com/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email })
-      });
-      const data = await response.json(); // Read response body
-      console.log("Response Status:", response.status);
-      console.log("Response Data:", data);
-      
-      setResponseMessage(response.ok ? 'Thank you for subscribing!' : 'Something went wrong.');
-      setEmail(response.ok ? '' : email);
-    } catch {minHeight: '100vh', 
-      setResponseMessage('Error connecting to the server.');
-    }
+    const handleSubscribe = async (e) => {
+      e.preventDefault();
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        setResponseMessage('Please enter a valid email address.');
+        return;
+      }
+      try {
+        const response = await fetch('https://finalpbackend-2.onrender.com/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email }),
+        });
+  
+        const data = await response.json(); // Read response body
+  
+        console.log("Response Status:", response.status);
+        console.log("Response Data:", data);
+  
+        if (response.ok) {
+          setResponseMessage(data.message || 'Thank you for subscribing!');
+          setEmail('');
+        } else {
+          setResponseMessage(data.error || 'Something went wrong.');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        setResponseMessage('Error connecting to the server.');
+      }
   };
-
-  const Testimonials = ({ feedback }) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
   
-    // Automatically cycle through feedback every 5 seconds
-    useEffect(() => {
-      const interval = setInterval(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % feedback.length);
-      }, 5000); // 5 seconds interval
-  
-      return () => clearInterval(interval); // Clear the interval on component unmount
-    }, [feedback.length]);
-  }
 
   return (
     <>
