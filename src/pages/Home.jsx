@@ -108,7 +108,7 @@ const Home = () => {
   return (
     <>
    
-    <div className=" container-fluid vh-100 d-flex flex-column" >
+    <div className=" container-fluid vh-100 d-flex flex-column  bg-light" >
      
     <section className="hero text-black text-center py-5 animate__animated animate__fadeIn h-75">
       <h1 className="display-4 ">Welcome to Local Server and Event Finder</h1>
