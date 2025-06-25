@@ -333,7 +333,7 @@ const AdminCreatePage = () => {
             {/* Hotel Image Form */}
             <div className="col-md-6"   >
               <div className="card bg-light tex-dark p-4 shadow-lg" >
-                <h2 className="text-center mb-4">Upload Hotel Image</h2>
+                <h2 className="text-center mb-4">Upload  Image</h2>
                 <button type="button" className="btn btn-secondary w-100 mb-3"   style={{ background: "#343a40"}} onClick={() => setToggle3(!toggle3)}>
                   {toggle3 ? <FaRegWindowMinimize /> : <FaRegWindowRestore />} Toggle Image Form
                 </button>

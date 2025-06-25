@@ -1,6 +1,6 @@
 /* Ensure body and html take full height and width */
 body {
-  background-image: url('/images/fish-water.jpeg'); /* Adjust the path if needed */
+  background-image: url('/images/fish-water.jpeg'); 
   background-size: cover; /* Ensure the image covers the whole screen */
   background-position: center;
   background-repeat: no-repeat;
@@ -27,7 +27,7 @@ html {
 body {
   padding: 0;
   margin: 0;
-  background: url('https://www.transparenttextures.com/patterns/brushed-alum.png'), linear-gradient(135deg, #C0C0C0, #8B4513, #6A0DAD);
+  /* background: url('https://www.transparenttextures.com/patterns/brushed-alum.png'), linear-gradient(135deg, #C0C0C0, #8B4513, #6A0DAD); */
   background-size: cover; /* Ensure the image covers the whole screen */
   background-position: center;
   background-repeat: no-repeat;
@@ -814,7 +814,7 @@ margin-top: 20px !important;
 
 .hero {
   position: relative;
-  background: url('https://www.transparenttextures.com/patterns/brushed-alum.png'), linear-gradient(135deg, #C0C0C0, #8B4513, #bb77ec);
+  /* background: url('https://www.transparenttextures.com/patterns/brushed-alum.png'), linear-gradient(135deg, #C0C0C0, #8B4513, #bb77ec); */
   padding: 150px 20px; /* Increased padding to push content down */
   min-height: 40vh; /* Ensures section takes full screen height */
   overflow: hidden;
@@ -871,6 +871,7 @@ margin-top: 20px !important;
 
 
 .footer-links {
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -887,7 +888,7 @@ margin-top: 20px !important;
 }
 
 #Contact {
-  background: url('https://www.transparenttextures.com/patterns/brushed-alum.png'), linear-gradient(135deg, #C0C0C0, #8B4513, #6A0DAD);
+  /* background: url('https://www.transparenttextures.com/patterns/brushed-alum.png'), linear-gradient(135deg, #C0C0C0, #8B4513, #6A0DAD); */
   color: #333;
   padding: 30px;
   
@@ -986,7 +987,7 @@ margin-top: 20px !important;
   }
 }
 footer{
-  background: linear-gradient(135deg, #C0C0C0, #8B4513, #6A0DAD);
+  /* background: linear-gradient(135deg, #C0C0C0, #8B4513, #6A0DAD); */
 }
 @media (max-width: 767px) {
   footer {

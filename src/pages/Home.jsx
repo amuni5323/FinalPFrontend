@@ -110,7 +110,7 @@ const Home = () => {
    
     <div className=" container-fluid vh-100 d-flex flex-column  bg-light" >
      
-    <section className="hero text-black text-center py-5 animate__animated animate__fadeIn h-75">
+    <section className="hero text-black text-center py-5 animate__animated animate__fadeIn h-75 bg-info">
       <h1 className="display-4 ">Welcome to Local Server and Event Finder</h1>
       <p className="lead">Discover the best events, jobs, and services in your area</p>
       <a href="/events" className="btn btn-light btn-lg mt-3">Explore Events</a>

@@ -5,7 +5,7 @@ import { FaLinkedin, FaGithub, FaTwitter, FaPhone, FaEnvelope, FaMapMarkerAlt, F
 
 const Footer = () => {
   return (
-    <footer className=" text-light py-5 position-relative">
+    <footer className=" text-light py-5 position-relative bg-secondary">
       <div className="container">
         <div className="row">
 
@@ -24,39 +24,38 @@ const Footer = () => {
 
         {/* Services, Company, and Legal */}
         <div className="row">
-          {/* Services */}
-          <div className="col-12 col-md-4 mb-4 mb-md-0">
-            <h5 className="text-uppercase">Services</h5>
-            <ul className="list-unstyled">
-              <li><Link to="/event" className="text-secondary">Event</Link></li>
-              <li><Link to="/hospitals" className="text-secondary">Hospitals</Link></li>
-              <li><Link to="/hotels" className="text-secondary">Marketing</Link></li>
-              <li><Link to="/courts" className="text-secondary">Courts</Link></li>
-            </ul>
-          </div>
+  {/* Services */}
+  <div className="col-12 col-md-4 mb-4 mb-md-0">
+    <h5 className="text-uppercase">Services</h5>
+    <ul className="list-unstyled">
+      <li><Link to="/server-management" className="text-info text-decoration-none">Server Management</Link></li>
+      <li><Link to="/cloud-hosting" className="text-info text-decoration-none">Cloud Hosting</Link></li>
+      <li><Link to="/data-backup" className="text-info text-decoration-none">Data Backup</Link></li>
+    </ul>
+  </div>
 
-          {/* Company */}
-          <div className="col-12 col-md-4 mb-4 mb-md-0">
-            <h5 className="text-uppercase">Company</h5>
-            <ul className="list-unstyled">
-              <li><Link to="/about" className="text-secondary">About Us</Link></li>
-              <li><Link to="#contact" className="text-secondary">Contact</Link></li>
-              <li><Link to="/jobs" className="text-secondary">Jobs</Link></li>
-              <li><Link to="/emergencies" className="text-secondary">Emergency</Link></li>
-            </ul>
-          </div>
+  {/* Legal */}
+  <div className="col-12 col-md-4 mb-4 mb-md-0">
+    <h5 className="text-uppercase">Legal</h5>
+    <ul className="list-unstyled">
+      <li><Link to="/privacy-policy" className="text-info text-decoration-none">Privacy Policy</Link></li>
+      <li><Link to="/terms" className="text-info text-decoration-none">Terms & Conditions</Link></li>
+      <li><Link to="/legal-support" className="text-info text-decoration-none">Legal Support</Link></li>
+    </ul>
+  </div>
 
-          {/* Legal */}
-          <div className="col-12 col-md-4 mb-4 mb-md-0">
-            <h5 className="text-uppercase">Legal</h5>
-            <ul className="list-unstyled">
-              <li><Link to="/terms" className="text-secondary">Terms of Use</Link></li>
-              <li><Link to="/privacy-policy" className="text-secondary">Privacy Policy</Link></li>
-              <li><Link to="/cookie-policy" className="text-secondary">Cookie Policy</Link></li>
-            </ul>
-          </div>
+  {/* Company */}
+  <div className="col-12 col-md-4 mb-4 mb-md-0">
+    <h5 className="text-uppercase">Company</h5>
+    <ul className="list-unstyled">
+      <li><Link to="/about" className="text-info text-decoration-none">About Us</Link></li>
+      <li><Link to="/contact" className="text-info text-decoration-none">Contact</Link></li>
+      <li><Link to="/careers" className="text-info text-decoration-none">Careers</Link></li>
+    </ul>
+  </div>
+</div>
 
-        </div>
+
 
         {/* Copyright */}
         <div className="row justify-content-center ">
@@ -67,7 +66,7 @@ const Footer = () => {
 
         {/* Social Media Icons at Bottom-Right */}
         <div className="position-absolute bottom-0 end-0 p-4">
-          <Link to="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-light mx-3">
+          <Link to="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className=" mx-3">
             <FaLinkedin size={30} />
           </Link>
           <Link to="https://www.github.com" target="_blank" rel="noopener noreferrer" className="text-light mx-3">
